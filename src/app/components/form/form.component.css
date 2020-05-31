@@ -1,0 +1,73 @@
+.component
+{
+	background-color: #2F4F4F;
+	text-align: center;
+}
+h2
+{
+	color: white;
+}
+label
+{
+	color: white;
+	width: 150px;
+	display: inline-block;
+	text-align: right;
+	margin-top: 0px;
+}
+input
+{
+	background-color: #000000;
+	border: 1px solid white;
+	color: white;
+	width: 200px;
+	padding: 5px;
+	margin-left: 1em;
+	display: inline-block;
+}
+textarea
+{
+	background-color: #000000;
+	border: 1px solid white;
+	color: white;
+	width: 200px;
+	padding: 5px;
+	margin-left: 1em;
+	display: inline-block;
+	vertical-align: top;
+}
+.input
+{
+	margin-bottom: 1em;
+}
+.validMessage
+{
+	background-color: #008000;
+	border: 1px solid #006400;
+	color: black;
+	padding: 5px;
+	margin-top: 0px;
+}
+.errorMessage
+{
+	background-color: #FF0000;
+	border: 1px solid #8B0000;
+	color: black;
+	padding: 5px;
+	margin-top: 0px;
+}
+.requiredMessage
+{
+	background-color: #FFFF00;
+	border: 1px solid #FFD700;
+	color: black;
+	padding: 5px;
+	margin-top: 0px;
+}
+#validateButton
+{
+	padding: 5px;
+	background-color: #000000;
+	border: 1px solid white;
+	color: white;
+}

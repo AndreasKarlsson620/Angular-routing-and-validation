@@ -1,0 +1,80 @@
+<div class="component">
+	<h2>
+		Form
+	</h2>
+	<form #myForm="ngForm">
+		<div class="input">
+			<label for="title">
+				Title:
+			</label>
+			<input id="title" name="title" type="text"
+			placeholder="Title" minlength="10" maxlength=""
+			[(ngModel)]="model.title" #title="ngModel" required/>
+			<!--Validation-->
+			<div *ngIf="title.valid" class="validMessage">
+				Title is valid!
+			</div>
+			<div *ngIf="title.dirty && title.invalid" class="errorMessage">
+				Title is invalid!
+			</div>
+			<div *ngIf="title.errors?.required" class="requiredMessage">
+				Title is required.
+			</div>
+		</div>
+		<div class="input">
+			<label for="content">
+				Content:
+			</label>
+			<textarea id="content" name="content" type="text"
+			placeholder="Content" minlength="" maxlength=""
+			[(ngModel)]="model.content" #content="ngModel" required></textarea>
+			<!--Validation-->
+			<div *ngIf="content.valid" class="validMessage">
+				Content is valid!
+			</div>
+			<div *ngIf="content.dirty && content.invalid" class="errorMessage">
+				Content is invalid!
+			</div>
+			<div *ngIf="content.errors?.required" class="requiredMessage">
+				Content is required.
+			</div>
+		</div>
+		<div class="input">
+			<label for="author">
+				Author:
+			</label>
+			<input id="author" name="author" type="text"
+			placeholder="Author" minlength="" maxlength=""
+			[(ngModel)]="model.author" #author="ngModel"/>
+			<!--Validation-->
+			<div *ngIf="author.dirty || author.untouched" class="validMessage">
+				Author is valid!
+			</div>
+		</div>
+		<div class="input">
+			<label for="timetoread">
+				Time to read:
+			</label>
+			<input id="timetoread" name="timetoread" type="number"
+			placeholder="Minutes" min="0" [(ngModel)]="model.timetoread" #timetoread="ngModel" required/>
+			<!--Validation-->
+			<div *ngIf="timetoread.valid" class="validMessage">
+				Time is valid!
+			</div>
+			<div *ngIf="timetoread.dirty && timetoread.invalid" class="errorMessage">
+				Time is invalid!
+			</div>
+			<div *ngIf="timetoread.errors?.required" class="requiredMessage">
+				Time is required.
+			</div>
+		</div>
+		<button [disabled]="myForm.invalid" id="validateButton">
+			Validate!
+		</button>
+	</form>
+	<!--
+	<div>
+		Diagnostic: {{diagnostic}}
+	</div>
+	-->
+</div>
